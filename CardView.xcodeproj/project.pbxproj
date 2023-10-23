@@ -11,6 +11,8 @@
 		0BC365172AE60C58001D6212 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC365162AE60C58001D6212 /* ContentView.swift */; };
 		0BC365192AE60C5B001D6212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC365182AE60C5B001D6212 /* Assets.xcassets */; };
 		0BC3651C2AE60C5B001D6212 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BC3651B2AE60C5B001D6212 /* Preview Assets.xcassets */; };
+		0BC365232AE60FEC001D6212 /* PersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC365222AE60FEC001D6212 /* PersonCardView.swift */; };
+		0BC365252AE61006001D6212 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC365242AE61006001D6212 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		0BC365162AE60C58001D6212 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0BC365182AE60C5B001D6212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BC3651B2AE60C5B001D6212 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0BC365222AE60FEC001D6212 /* PersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCardView.swift; sourceTree = "<group>"; };
+		0BC365242AE61006001D6212 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				0BC365142AE60C58001D6212 /* CardViewApp.swift */,
 				0BC365162AE60C58001D6212 /* ContentView.swift */,
+				0BC365222AE60FEC001D6212 /* PersonCardView.swift */,
+				0BC365242AE61006001D6212 /* Person.swift */,
 				0BC365182AE60C5B001D6212 /* Assets.xcassets */,
 				0BC3651A2AE60C5B001D6212 /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BC365172AE60C58001D6212 /* ContentView.swift in Sources */,
+				0BC365232AE60FEC001D6212 /* PersonCardView.swift in Sources */,
+				0BC365252AE61006001D6212 /* Person.swift in Sources */,
 				0BC365152AE60C58001D6212 /* CardViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
