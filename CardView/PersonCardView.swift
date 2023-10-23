@@ -12,6 +12,7 @@ struct PersonCardView: View {
     
     var body: some View {
         VStack{
+            ZStack {
             Image(person.headerImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -36,33 +37,38 @@ struct PersonCardView: View {
             }
         }
         
-        VStack(spacing: -31.0) {
-            Button {
-                // ?
-            } label: {
-                Text("Follow")
-                padding(.vertical, 4)
-                padding(.horizontal)
-                    .overlay {
-                        Capsule()
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    }
-            }
-            .frame(maxWidth: .infinity, alignment: .trailing)
-            .padding()
-            
-            HStack {
-                Text(person.userName)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
+            VStack(spacing: -31.0) {
+                Button {
+                    // ?
+                } label: {
+                    Text("Follow")
+                    padding(.vertical, 4)
+                    padding(.horizontal)
+                        .overlay {
+                            Capsule()
+                                .stroke(lineWidth: 2)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        }
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding()
                 
-                Text(".\(person.followerCount)")
-                    .foregroundColor(.gray)
+                HStack {
+                    Text(person.userName)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                    
+                    Text(".\(person.followerCount)")
+                        .foregroundColor(.gray)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+                
+                Text(person.jobTitle)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.leading, .bottom])
+                
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding([.leading, .bottom])
-
         }
     }
 }
