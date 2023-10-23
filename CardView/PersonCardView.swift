@@ -20,36 +20,56 @@ struct PersonCardView: View {
             
             Image(person.profileImage)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
                 .frame(height: 80)
                 .clipShape(Circle())
-                .offset(y: 40)
+                .offset(y: -40)
                 .padding(.horizontal)
-            
-            Text("test")
         }
         .overlay(alignment: .topTrailing) {
             Button {
                 // ?
             } label: {
                 Image(systemName: "xmark.circle.fill")
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.white)
                     .padding(6)
             }
         }
         
-        VStack {
+        VStack(spacing: -31.0) {
             Button {
                 // ?
             } label: {
                 Text("Follow")
+                padding(.vertical, 4)
                 padding(.horizontal)
+                    .overlay {
+                        Capsule()
+                            .stroke(lineWidth: 2)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    }
             }
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .padding()
+            
+            HStack {
+                Text(person.userName)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                
+                Text(".\(person.followerCount)")
+                    .foregroundColor(.gray)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding([.leading, .bottom])
+
         }
     }
 }
 
-#Preview {
-    PersonCardView(person: person1)
-        .previewLayout(.sizeThatFits)
+struct PersonCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        PersonCardView(person: person1)
+            .previewLayout(.sizeThatFits)
+    }
 }
