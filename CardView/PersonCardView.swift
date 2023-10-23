@@ -70,6 +70,8 @@ struct PersonCardView: View {
                 
             }
         }
+        .background(Color(.tertiarySystemFill))
+        .cornerRadius(12)
     }
 }
 
