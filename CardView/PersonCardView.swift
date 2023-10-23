@@ -8,11 +8,48 @@
 import SwiftUI
 
 struct PersonCardView: View {
+    let person: Person
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image(person.headerImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 80)
+                .clipped()
+            
+            Image(person.profileImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 80)
+                .clipShape(Circle())
+                .offset(y: 40)
+                .padding(.horizontal)
+            
+            Text("test")
+        }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                // ?
+            } label: {
+                Image(systemName: "xmark.circle.fill")
+                    .foregroundColor(.yellow)
+                    .padding(6)
+            }
+        }
+        
+        VStack {
+            Button {
+                // ?
+            } label: {
+                Text("Follow")
+                padding(.horizontal)
+            }
+        }
     }
 }
 
 #Preview {
-    PersonCardView()
+    PersonCardView(person: person1)
+        .previewLayout(.sizeThatFits)
 }
